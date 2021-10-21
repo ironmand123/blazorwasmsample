@@ -1,20 +1,20 @@
-@page "/Matematik"
+﻿@page "/Matematik"
 
 <h1>Matematik</h1>
 
 <p>Er du doven?</p>
 
-<<form action="@onclick="add">
+<form action="@onclick="addnumbers">
   <label for="firstnumber">First number:</label><br>
   <input type="number" id="firstnumber" name="firstnumber" value=""><br>
   <label for="secondnumber">second number</label><br>
   <input type="number" id="secondnumber" name="secondnumber" value=""><br><br>
-  <input type="submit" value="add">
+  <input type="submit" value="addnumbers">
 </form>
 
-<p> summen er: @sumof <p>
+<p> summen er: @sumof </p>
 
-@add {
+@code {
     private int sumof;
     private int firstnumber;
     private int secondnumber;
